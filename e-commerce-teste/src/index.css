@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  /* Light Mode - Foco em Claridade */
+  --c-bg: #FCFAFA;        /* Fundo quase branco, mais suave */
+  --c-surface: #FFFFFF;   /* Cards brancos puros para destaque */
+  --c-text: #1A1A1B;      /* Texto quase preto para leitura */
+  --c-primary: #D52941;   /* Cor de ação (botões) */
+  --c-accent: #FCD581;    /* Detalhes (estrelas, badges) */
+  --c-muted: #6B7280;     /* Texto secundário */
+}
+
+.dark {
+  /* Dark Mode - Foco em Elegância */
+  --c-bg: #2D0812;        /* Vinho bem escuro (baseado na sua cor 990D35) */
+  --c-surface: #3D0B19;   /* Cards levemente mais claros que o fundo */
+  --c-text: #FFF8E8;      /* Texto bege claro (sua cor FFF8E8) */
+  --c-primary: #E63946;   /* Vermelho um pouco mais vibrante para o dark */
+  --c-accent: #FCD581;    /* Amarelo ouro para contraste */
+  --c-muted: #A0A0A0;     /* Texto secundário cinza */
+}
+
+@theme {
+  --color-brand-bg: var(--c-bg);
+  --color-brand-surface: var(--c-surface);
+  --color-brand-text: var(--c-text);
+  --color-brand-primary: var(--c-primary);
+  --color-brand-accent: var(--c-accent);
+  --color-brand-muted: var(--c-muted);
+}
