@@ -1,14 +1,11 @@
 import { Star, ShoppingCart } from 'lucide-react'
 import type { Product } from '../interfaces'
+import { Link } from 'react-router-dom'
+import { convertValue } from '../utils'
 
 export default function ProductCard( product: Product ) {
-  function convertValue(num: number) : string {
-    let numF = num.toFixed(2)
-    numF = numF.replace(/\./g, ',')
-    return 'R$ ' + numF
-  }
-
   return (
+    <Link to={`product/${product.id}`}>
       <div className="group bg-brand-surface w-72 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-brand-primary/10 hover:cursor-pointer">
     {/* Imagem do Produto */}
     <div className="relative h-64 bg-gray-100 overflow-hidden">
@@ -17,7 +14,7 @@ export default function ProductCard( product: Product ) {
         alt={product.name}
         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
       />
-      <span className="absolute top-3 left-3 bg-brand-accent text-brand-text text-xs font-bold px-2 py-1 rounded-full uppercase">
+      <span className="absolute top-3 left-3 bg-brand-muted text-brand-text text-xs font-bold px-2 py-1 rounded-full uppercase">
         Oferta
       </span>
     </div>
@@ -48,5 +45,6 @@ export default function ProductCard( product: Product ) {
       </div>
     </div>
   </div>
+  </Link>
   )
 }

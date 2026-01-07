@@ -1,5 +1,7 @@
 import Home from './pages/Home/Home'
+import ProductPage from './pages/Product/Product'
 import { useEffect } from 'react'
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
 
 function App() {
   useEffect(() => {
@@ -15,9 +17,12 @@ function App() {
   }, [])
 
   return (
-    <>
-      <Home/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/> } />
+        <Route path='/product/:id' element={<ProductPage/> } />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

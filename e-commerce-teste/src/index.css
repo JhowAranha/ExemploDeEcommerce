@@ -2,7 +2,7 @@
 
 :root {
   /* Light Mode - Foco em Claridade */
-  --c-bg: #FCFAFA;        /* Fundo quase branco, mais suave */
+  --c-bg: #FAFAFA;        /* Fundo quase branco, mais suave */
   --c-surface: #FFFFFF;   /* Cards brancos puros para destaque */
   --c-text: #1A1A1B;      /* Texto quase preto para leitura */
   --c-primary: #D52941;   /* Cor de ação (botões) */
